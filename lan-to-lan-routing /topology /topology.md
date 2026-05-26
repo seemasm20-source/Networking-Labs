@@ -61,15 +61,16 @@ Cable type: Copper Straight-Through for all connections
 
 
 
-
-| Device   | Interface       | Switch   | Connected Device   | Connected Interface |
-| -------- | --------------- | -------- | ------------------ | ------------------- |
-| PC1      | FastEthernet0   | Switch 1 | PC2                | FastEthernet0       |
-| PC3      | FastEthernet0   | Switch 1 | PC4                | FastEthernet0       |
-| PC5      | FastEthernet0   | Switch 2 | PC6                | FastEthernet0       |
-| Switch 1 | GigabitEthernet | Router   | GigabitEthernet0/0 | Switch 2            |
-| Switch 2 | GigabitEthernet | Router   | GigabitEthernet0/1 | Switch 1            |
-
+| Source Device | Source Port     | Destination Device | Destination Port   |
+| ------------- | --------------- | ------------------ | ------------------ |
+| PC1           | FastEthernet0   | Switch 1           |  FastEthernet      |
+| PC2           | FastEthernet0   | Switch 1           |  FastEthernet      |
+| PC3           | FastEthernet0   | Switch 1           |  FastEthernet      |
+| PC4           | FastEthernet0   | Switch 2           | FastEthernet       |
+| PC5           | FastEthernet0   | Switch 2           |  FastEthernet      |
+| PC6           | FastEthernet0   | Switch 2           | FastEthernet       |
+| Switch 1      | GigabitEthernet | Router             | GigabitEthernet0/0 |
+| Switch 2      | GigabitEthernet | Router             | GigabitEthernet0/1 |
 
 
 
