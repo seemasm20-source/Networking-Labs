@@ -85,3 +85,66 @@ What Each Command Does in CLI:
 | Write Memory                      | Saves config permanently — survives restart          |
 
 
+
+
+
+
+
+
+
+
+Verification Commands
+After configuration — run these to confirm everything
+is working correctly:
+
+
+
+
+
+! Check both interfaces are active
+Router# show ip interface brief
+
+Expected output:
+Interface           IP-Address    OK? Status  Protocol
+GigabitEthernet0/0  10.0.0.4      YES up      up       ✅
+GigabitEthernet0/1  192.168.1.4   YES up      up       ✅
+
+
+
+
+
+
+<img width="1920" height="1080" alt="Screenshot (266)" src="https://github.com/user-attachments/assets/fe55cb39-a690-4ab5-abd3-757c52c09234" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ping Test — Confirm Cross-LAN Communication
+From PC1 (10.0.0.1) → Desktop → Command Prompt:
+
+
+
+
+
+
+
