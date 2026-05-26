@@ -14,6 +14,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 🔧 Devices Used
 
 | Device Model      | Quantity | Purpose                       |
