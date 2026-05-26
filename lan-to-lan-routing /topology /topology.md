@@ -46,43 +46,199 @@
 
 
 
-
-
-
-
-
-
-
-
-⚙️ Step-by-Step Build Guide
-Step 1 — Add Devices to Canvas
-
-Open Cisco Packet Tracer
-Drag 1 x Router 2911 → place in the centre
-Drag 2 x Switch 2960 → one left, one right of router
-Drag 6 x PC → 3 below each switch
-
-
 Step 2 — Connect Cables
 Cable type: Copper Straight-Through for all connections
-FromPortToPortPC1FastEthernet0Switch 1any FastEthernetPC2FastEthernet0Switch 1any FastEthernetPC3FastEthernet0Switch 1any FastEthernetPC4FastEthernet0Switch 2any FastEthernetPC5FastEthernet0Switch 2any FastEthernetPC6FastEthernet0Switch 2any FastEthernetSwitch 1GigabitEthernetRouterGigabitEthernet0/0Switch 2GigabitEthernetRouterGigabitEthernet0/1
+
+
+| Device   | Interface       | Switch   | Connected Device   | Connected Interface |
+| -------- | --------------- | -------- | ------------------ | ------------------- |
+| PC1      | FastEthernet0   | Switch 1 | PC2                | FastEthernet0       |
+| PC3      | FastEthernet0   | Switch 1 | PC4                | FastEthernet0       |
+| PC5      | FastEthernet0   | Switch 2 | PC6                | FastEthernet0       |
+| Switch 1 | GigabitEthernet | Router   | GigabitEthernet0/0 | Switch 2            |
+| Switch 2 | GigabitEthernet | Router   | GigabitEthernet0/1 | Switch 1            |
+
+
+
+
+
+
 ✅ All cable dots turn green = connected correctly
 🔴 Red dot = wrong cable or wrong port — delete and redo
 
+
+
+
+
 Step 3 — Assign IPs to All PCs
 Click each PC → Desktop tab → IP Configuration → Static
-PCIP AddressSubnet MaskDefault GatewayPC110.0.0.1255.255.255.010.0.0.4PC210.0.0.2255.255.255.010.0.0.4PC310.0.0.3255.255.255.010.0.0.4PC4192.168.1.1255.255.255.0192.168.1.4PC5192.168.1.2255.255.255.0192.168.1.4PC6192.168.1.3255.255.255.0192.168.1.4
 
-Note: Default gateway is the router's IP on
-that PC's side.
+
+
+
+
+
+| PC IP       | Subnet Mask   | Default Gateway |
+| ----------- | ------------- | --------------: |
+| 10.0.0.1    | 255.255.255.0 | 10.0.0.4        |
+| 10.0.0.2    | 255.255.255.0 | 10.0.0.4        |
+| 10.0.0.3    | 255.255.255.0 | 10.0.0.4        |
+| 192.168.1.1 | 255.255.255.0 | 192.168.1.4     |
+| 192.168.1.2 | 255.255.255.0 | 192.168.1.4     |
+| 192.168.1.3 | 255.255.255.0 | 192.168.1.4     |
+
+
+
+
+Note: Default gateway is the router's IP on that PC's side.
 LAN 1 PCs (PC1–PC3) → gateway 10.0.0.4
 LAN 2 PCs (PC4–PC6) → gateway 192.168.1.4
 
-PC1 IP configuration — LAN 1 (HR):
-<img width="1920" height="1080" alt="PC1 IP Config" src="https://github.com/user-attachments/assets/e5011b07-df28-4b9f-8081-0d6956a304ed" />
-PC4 IP configuration — LAN 2 (Finance):
-<img width="1920" height="1080" alt="PC4 IP Config" src="https://github.com/user-attachments/assets/babcb9ab-42c3-448d-b247-04cc0cd1ce78" />
 
-Same configuration applied to PC2 and PC3 (LAN 1)
-and PC5 and PC6 (LAN 2) with their respective IPs
-from the table above.
+
+
+
+PC1 IP configuration — LAN 1 (HR):
+
+
+
+
+
+<img width="1920" height="1080" alt="Screenshot (275)" src="https://github.com/user-attachments/assets/506a6d26-e8dc-4080-85f2-ef2cbb0e9f21" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1920" height="1080" alt="Screenshot (276)" src="https://github.com/user-attachments/assets/a5ce7926-3d53-4857-80e0-0689c30ec177" />
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1920" height="1080" alt="Screenshot (277)" src="https://github.com/user-attachments/assets/5c49260e-42e7-41a8-89df-91cb1fa34f2c" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PC4 IP configuration — LAN 2 (Finance):
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1920" height="1080" alt="Screenshot (278)" src="https://github.com/user-attachments/assets/c0903e53-0984-4e1d-8fa0-c44850e1edc0" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1920" height="1080" alt="Screenshot (279)" src="https://github.com/user-attachments/assets/3013682b-9651-4f5a-b7ea-9cf93adfe31c" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1920" height="1080" alt="Screenshot (280)" src="https://github.com/user-attachments/assets/d0771b32-fbf0-4045-ac89-d1966645867b" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
