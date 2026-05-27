@@ -1,7 +1,7 @@
  Router Configuration
 
 Overview
-The Cisco 2911 router is configured with two interfaces —
+The Cisco 2911 router is configured with two interfaces 
 one facing HR (LAN 1) and one facing Finance (LAN 2).
 All commands are entered in the Router CLI tab inside
 Cisco Packet Tracer.
@@ -38,10 +38,17 @@ Note- Every command only works at its correct level. If a command has no effect 
 
 
 
+Router Configuration Commands:
+
+
+
+
 
 Router> enable
 
 Router# configure terminal
+
+
 
 
 ! --- LAN 1 interface (HR Department) ---
@@ -53,6 +60,9 @@ Router(config-if)# ip address 10.0.0.4 255.255.255.0
 Router(config-if)# no shutdown
 
 Router(config-if)# exit
+
+
+
 
 
 ! --- LAN 2 interface (Finance Department) ---
@@ -74,13 +84,17 @@ Router# write memory
 
 
 
-Note:  The default gateway on every PC is the router's IP address on that PC's side.
+
+
+
+
+Note:  The default gateway on every PC is the router's IP address on that PC's side. LAN 1 PCs use 10.0.0.4 — LAN 2 PCs use 192.168.1.4
 
 
 
 
 
-LAN 1 PCs use 10.0.0.4 — LAN 2 PCs use 192.168.1.4
+
 
 
 
@@ -198,8 +212,7 @@ What Each Command Does in CLI:
 
 
 Verification Commands
-After configuration — run these to confirm everything
-is working correctly:
+After configuration run show ip interface brief command to confirm everything is working correctly:
 
 
 
@@ -217,6 +230,17 @@ GigabitEthernet0/0  10.0.0.4      YES up      up       ✅
 GigabitEthernet0/1  192.168.1.4   YES up      up       ✅
 
 
+
+
+
+
+
+
+
+
+
+
+[Screenshot of show ip interface brief output]
 
 
 
@@ -246,12 +270,12 @@ GigabitEthernet0/1  192.168.1.4   YES up      up       ✅
 
 
 
-Ping Test — Confirm Cross-LAN Communication
+Ping Test — Confirm Cross-LAN Communication From PC1 (10.0.0.1) → Desktop → Command Prompt:
 
 
 
 
-From PC1 (10.0.0.1) → Desktop → Command Prompt:
+
 
 
 
@@ -263,6 +287,24 @@ ping 10.0.0.3       → PC3 same LAN    Expected: Reply ✅
 ping 192.168.1.1    → PC4 other LAN   Expected: Reply ✅
 ping 192.168.1.2    → PC5 other LAN   Expected: Reply ✅
 ping 192.168.1.3    → PC6 other LAN   Expected: Reply ✅
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Screenshot of successful cross-LAN ping:
 
 
 
