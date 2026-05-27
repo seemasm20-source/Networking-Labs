@@ -210,8 +210,8 @@ What Each Command Does in CLI:
 
 | Command                           | What It Does                                         |
 | --------------------------------- | ---------------------------------------------------- |
-| Enable                            | Enters privileged mode — full access to all commands |
-| Configure Terminal                | Enters configuration mode — allows changes           |
+| Enable                            | Enters privileged mode, full access to all commands |
+| Configure Terminal                | Enters configuration mode, allows changes           |
 | Interface GigabitEthernet0/0      | Selects the port facing LAN 1 (HR)                   |
 | Ip Address 10.0.0.4 255.255.255.0 | Assigns IP and subnet mask to this port              |
 | No ShutDown                       | Opens the port — Cisco ports are locked by default   |
