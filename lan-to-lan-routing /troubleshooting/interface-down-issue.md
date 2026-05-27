@@ -443,6 +443,47 @@ Step 2 - Cross-LAN ping test
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 🎯 Real-World Help Desk Ticket
 
 User complaint: HR team cannot reach the Finance server
