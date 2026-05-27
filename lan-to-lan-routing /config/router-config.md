@@ -322,7 +322,38 @@ Expected output:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Ping Test — Confirm Cross-LAN Communication From PC1 (10.0.0.1) → Desktop → Command Prompt:
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -379,7 +410,26 @@ Ping Test — Confirm Cross-LAN Communication From PC1 (10.0.0.1) → Desktop �
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Screenshot of successful Cross-LAN ping:
+
+
+
 
 
 
