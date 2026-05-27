@@ -6,13 +6,19 @@ Issue — Router Interface Administratively Down
 
 
 📋 Problem Summary
-Router interface GigabitEthernet0/0 was administratively down blocking all cross-LAN
-communication between HR (LAN 1) and Finance (LAN 2).
+Router interface GigabitEthernet0/0 was administratively down blocking 
+
+all cross-LAN communication between 
+
+HR (LAN 1) and Finance (LAN 2)
 
 
 🔍 Cause
+
 The shutdown command was typed on GigabitEthernet0/0
+
 which manually disabled the interface.
+
 
 
 
@@ -64,7 +70,16 @@ which manually disabled the interface.
 
 
 
+
+
+
+
+
+
 🔎 Symptoms Observed
+
+
+
 
 
 Test                                      | Result      | Reason                                                |
@@ -77,6 +92,8 @@ Test                                      | Result      | Reason                
 
 
 Note: Switches handle same-LAN traffic independently.The router is only involved when traffic crosses
+
+
 from one network to another. This is why same-LAN pings were unaffected.
 
 
@@ -215,7 +232,13 @@ from one network to another. This is why same-LAN pings were unaffected.
 
 
 
+
+
+
+
 Re-enabled both router interfaces using no shutdown. This brought both interfaces from
+
+
 administratively down → up.
 
 
@@ -274,9 +297,18 @@ administratively down → up.
 
 
 
+
+
+
 Step 1 — show ip interface brief
 
+
+
+
+
 Confirmed both interfaces are now active.
+
+
 
 
 
@@ -370,9 +402,8 @@ Confirmed both interfaces are now active.
 
 
 
-Step 2 - Cross-LAN ping test
-Pinging from LAN 1 to LAN 2 confirmed
-communication fully restored:
+Step 2 - Cross-LAN ping test Pinging from LAN 1 to LAN 2 confirmed communication fully restored.
+
 
 
 
