@@ -73,7 +73,6 @@ which manually disabled the interface.
 
 
 
-
 🔎 Symptoms Observed
 
 
@@ -304,8 +303,6 @@ Step 1 — show ip interface brief
 
 
 
-Confirmed both interfaces are now active.
-
 
 
 
@@ -400,7 +397,7 @@ Confirmed both interfaces are now active.
 
 
 
-Step 2 - Cross-LAN ping test Pinging from LAN 1 to LAN 2 confirmed communication fully restored.
+Step 2 - Cross-LAN ping test 
 
 
 
@@ -446,7 +443,21 @@ Step 2 - Cross-LAN ping test Pinging from LAN 1 to LAN 2 confirmed communication
 
 
 
-<img width="1920" height="1080" alt="Screenshot (273)" src="https://github.com/user-attachments/assets/bb0d6cf0-a494-44b2-a9ac-4ea113f15cdf" />
+🎯 Real-World Help Desk Ticket
+
+User complaint: HR team cannot reach the Finance server
+or any other department. Internal HR communication
+is working fine.
+
+
+
+Root cause: Router interface facing HR (LAN 1) went
+administratively down , same-LAN traffic was
+unaffected because it goes through the switch only.
+
+
+Resolution: Re-enabled router interface using no shutdown.
+Verified with show ip interface brief and ping test.
 
 
 
@@ -481,7 +492,6 @@ Step 2 - Cross-LAN ping test Pinging from LAN 1 to LAN 2 confirmed communication
 
 
 
-<img width="1920" height="1080" alt="Screenshot (274)" src="https://github.com/user-attachments/assets/41f805d0-d3d9-4b3f-a65d-09846e57d521" />
 
 
 
