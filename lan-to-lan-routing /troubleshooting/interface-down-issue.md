@@ -1,7 +1,7 @@
 
 Troubleshooting — Issue 1
 
-Issue — Router Interface Administratively Down
+1. Issue — Router Interface Administratively Down
 
 
 
@@ -11,7 +11,7 @@ Router interface GigabitEthernet0/0 was administratively down blocking
 all cross-LAN communication between HR (LAN 1) and Finance (LAN 2)
 
 
-🔍 Cause
+2. 🔍 Cause
 
 The shutdown command was typed on GigabitEthernet0/0
 
@@ -73,7 +73,7 @@ which manually disabled the interface.
 
 
 
-🔎 Symptoms Observed
+3. 🔎 Symptoms Observed
 
 
 
@@ -224,7 +224,7 @@ from one network to another. This is why same-LAN pings were unaffected.
 
 
 
-🔧 Fix
+4. 🔧 Fix
 
 
 
@@ -290,7 +290,7 @@ administratively down → up.
 
 
 
-✅ Verification
+5. ✅ Verification
 
 
 
@@ -410,6 +410,106 @@ Step 2 - Cross-LAN ping test
 
 
 <img width="1920" height="1080" alt="Screenshot (272)" src="https://github.com/user-attachments/assets/e53e37a1-8f44-4d91-9ce3-d9f734e15533" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
