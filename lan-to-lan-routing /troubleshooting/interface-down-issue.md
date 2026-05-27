@@ -1,1 +1,164 @@
 
+Troubleshooting — Issue 1
+
+Issue — Router Interface Administratively Down
+
+
+
+📋 Problem Summary
+Router interface GigabitEthernet0/0 was administratively down blocking all cross-LAN
+communication between HR (LAN 1) and Finance (LAN 2).
+
+
+🔍 Cause
+The shutdown command was typed on GigabitEthernet0/0
+which manually disabled the interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1920" height="1080" alt="Screenshot (229)" src="https://github.com/user-attachments/assets/65a2363f-5153-4c53-8e81-75c66d2fae0e" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🔎 Symptoms Observed
+
+
+Test                                      | Result      | Reason                                                |
+| --------------------------------------- | :---------: | ----------------------------------------------------- |
+| Same-LAN Ping (10.0.0.1 → 10.0.0.2)     | Reply ✅     | Switch handles same-LAN traffic - router not involved |
+| Cross-LAN Ping (10.0.0.1 → 192.168.1.1) | Timed out ❌ | Traffic must pass through router - Gi0/0 is down      |
+
+
+
+
+
+Note: Switches handle same-LAN traffic independently.The router is only involved when traffic crosses
+from one network to another. This is why same-LAN pings were unaffected.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1920" height="1080" alt="Screenshot (257)" src="https://github.com/user-attachments/assets/bfd8b49e-b165-4fb3-b622-2e1f0600cf23" />
+
+
+🔧 Fix
+
+
+
+
+Re-enabled both router interfaces using no shutdown. This brought both interfaces from
+administratively down → up.
+
+
+
+
+
+✅ Verification
+
+
+
+Step 1 — show ip interface brief
+Confirmed both interfaces are now active.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Step 2 - Cross-LAN ping test
+Pinging from LAN 1 to LAN 2 confirmed
+communication fully restored:
