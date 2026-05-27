@@ -225,9 +225,10 @@ Router# show ip interface brief
 Expected output:
 
 
-Interface           IP-Address    OK? Status  Protocol
-GigabitEthernet0/0  10.0.0.4      YES up      up       ✅
-GigabitEthernet0/1  192.168.1.4   YES up      up       ✅
+| Interface          | IP-Address  | OK | Status | Protocol |
+| ------------------ | ----------- | :-: | ------ | :------: |
+| GigabitEthernet0/0 | 10.0.0.4    | YES | up     | ✅       |
+| GigabitEthernet0/1 | 192.168.1.4 | YES | up     | ✅       |
 
 
 
@@ -282,11 +283,13 @@ Ping Test — Confirm Cross-LAN Communication From PC1 (10.0.0.1) → Desktop �
 
 
 
-ping 10.0.0.2       → PC2 same LAN    Expected: Reply ✅
-ping 10.0.0.3       → PC3 same LAN    Expected: Reply ✅
-ping 192.168.1.1    → PC4 other LAN   Expected: Reply ✅
-ping 192.168.1.2    → PC5 other LAN   Expected: Reply ✅
-ping 192.168.1.3    → PC6 other LAN   Expected: Reply ✅
+| IP Address  | Device | Same LAN? | Expected Reply |
+| ----------- | ------ | :-------: | -------------- |
+| 10.0.0.2    | PC2    | Yes       | Reply ✅        |
+| 10.0.0.3    | PC3    | Yes       | Reply ✅        |
+| 192.168.1.1 | PC4    | No        | Reply ✅        |
+| 192.168.1.2 | PC5    | No        | Reply ✅        |
+| 192.168.1.3 | PC6    | No        | Reply ✅        |
 
 
 
