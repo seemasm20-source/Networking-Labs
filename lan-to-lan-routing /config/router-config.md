@@ -247,7 +247,29 @@ GigabitEthernet0/1  192.168.1.4   YES up      up       ✅
 
 
 Ping Test — Confirm Cross-LAN Communication
+
+
+
+
 From PC1 (10.0.0.1) → Desktop → Command Prompt:
+
+
+
+
+
+
+ping 10.0.0.2       → PC2 same LAN    Expected: Reply ✅
+ping 10.0.0.3       → PC3 same LAN    Expected: Reply ✅
+ping 192.168.1.1    → PC4 other LAN   Expected: Reply ✅
+ping 192.168.1.2    → PC5 other LAN   Expected: Reply ✅
+ping 192.168.1.3    → PC6 other LAN   Expected: Reply ✅
+
+
+
+
+
+
+
 
 
 
