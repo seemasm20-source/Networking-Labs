@@ -1,8 +1,11 @@
  Router Configuration
 
-Overview
+Overview:
+
 The Cisco 2911 router is configured with two interfaces 
 one facing HR (LAN 1) and one facing Finance (LAN 2).
+
+
 All commands are entered in the Router CLI tab inside
 Cisco Packet Tracer.
 
