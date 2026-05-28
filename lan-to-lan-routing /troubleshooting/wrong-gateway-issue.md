@@ -15,7 +15,6 @@ Issue - PC's Could Not Communicate Between LANs
 All PCs across both LANs had no default gateway configured. This blocked all cross-LAN communication
 
 
-
 between HR (LAN 1) and Finance (LAN 2) while same-LAN communication remained unaffected.
 
 
