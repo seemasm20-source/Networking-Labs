@@ -2,13 +2,16 @@ Troubleshooting — Issue 2
 
 
 
-Issue — PCs Could Not Communicate Between LANs
+Issue - PCs Could Not Communicate Between LANs
 
 
 
 
 
 📋 Problem Summary
+
+
+
 All PCs across both LANs had no default gateway configured. This blocked all cross-LAN communication
 
 
@@ -22,8 +25,13 @@ between HR (LAN 1) and Finance (LAN 2) while same-LAN communication remained una
 
 
 
-🔍 Cause
+🔍 Cause:
+
+
+
 The default gateway field was left empty on all PCs during initial IP configuration. Without a gateway the PC has no exit route to send
+
+
 traffic outside its own LAN, it cannot reach the router or any other network.
 
 
