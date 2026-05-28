@@ -8,7 +8,7 @@ Issue - PC's Could Not Communicate Between LANs
 
 
 
-📋 Problem Summary:
+📋 Problem Summary:-
 
 
 
@@ -25,7 +25,7 @@ between HR (LAN 1) and Finance (LAN 2) while same-LAN communication remained una
 
 
 
-🔍 Cause:
+🔍 Cause:-
 
 
 
@@ -336,7 +336,7 @@ gateway is never consulted. Cross-LAN traffic must exit through the router  gate
 
 
 
-🔧 Fix :
+🔧 Fix :-
 
 
 Added the correct default gateway on all PCs:
@@ -550,7 +550,7 @@ respective gateway addresses from the table above.
 
 
 
-✅ Verification
+✅ Verification:-
 Cross-LAN pings confirmed communication fully restored
 after adding correct gateway on all PCs:
 
